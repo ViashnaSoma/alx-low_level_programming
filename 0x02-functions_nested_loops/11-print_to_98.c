@@ -7,18 +7,18 @@ void print_to_98(int n)
 {
 	int count;
 	
-	printf(%d, n);
+	printf("%d", n);
 	
 	if (n < 98)
 	{
-		for (count = n+1; count < 98, count ++)
+		for (count = n+1; count < 98; count ++;)
 		{
 			printf("%d, ", count);
 		}
 	}
 	else if (n > 98)
 	{
-		for (count = n-1; count > 98, count --)
+		for (count = n-1; count > 98; count --;)
 		{
 			printf("%d, ", count);
 		}
