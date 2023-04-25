@@ -10,10 +10,11 @@ void print_to_98(int n)
 	if (n < 98)
 	{
 		printf("%d, ", n);
-		for (count = n+1; count <= 98; count ++)
+		for (count = n+1; count < 98; count ++)
 		{
 			printf("%d, ", count);
 		}
+		printf("98");
 	}
 	else if (n > 98)
 	{
@@ -22,6 +23,7 @@ void print_to_98(int n)
 		{
 			printf("%d, ", count);
 		}
+		printf("98");
 	}
 	else
 	{
