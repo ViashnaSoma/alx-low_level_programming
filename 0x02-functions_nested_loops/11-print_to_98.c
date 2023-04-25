@@ -6,11 +6,11 @@
 void print_to_98(int n)
 {
 	int count;
-	
+
 	if (n < 98)
 	{
 		printf("%d, ", n);
-		for (count = n+1; count < 98; count ++)
+		for (count = n + 1; count < 98; count++)
 		{
 			printf("%d, ", count);
 		}
@@ -19,7 +19,7 @@ void print_to_98(int n)
 	else if (n > 98)
 	{
 		printf("%d, ", n);
-		for (count = n-1; count >= 98; count --)
+		for (count = n - 1; count > 98; count--)
 		{
 			printf("%d, ", count);
 		}
@@ -30,4 +30,4 @@ void print_to_98(int n)
 		printf("%d", n);
 	}
 	putchar('\n');
-}			
+}
