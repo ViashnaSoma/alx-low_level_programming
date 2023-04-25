@@ -1,15 +1,20 @@
 #include "main.h"
 
 /**
-* print_alphabet - Prints the alphabet in lowercase
+* main - prints the word _putchar
+* Return: Always 0 (Success)
 */
-void print_alphabet(void)
+int main(void)
 {
-	int i;
+	char display[] = "_putchar";
 
-	for (i = 97; i <= 122; i++)
+	int i, message_len;
+
+	message_len = sizeof(message) / sizeof(message[0]);
+	for (i = 0; i < message_len - 1; i++)
 	{
-		_putchar(i);
+		_putchar(display[i]);
 	}
 	_putchar('\n');
+	return (0);
 }
