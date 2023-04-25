@@ -5,7 +5,7 @@
 */
 int main(void)
 {
-	char display[];
+	char display[] = "_putchar";
 
 	int i;
 	
@@ -13,6 +13,6 @@ int main(void)
 	{
 		_putchar(display[i]);
 	}
-	_putchar('/n');
+	_putchar('\n');
 	return (0);
 }
