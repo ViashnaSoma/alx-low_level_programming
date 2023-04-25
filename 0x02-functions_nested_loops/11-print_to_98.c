@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* void print_to_98 returns all natural numbers from n to 98 in order
+*print_to_98 returns all natural numbers from n to 98 in order
 */
 
 void print_to_98(int n)
