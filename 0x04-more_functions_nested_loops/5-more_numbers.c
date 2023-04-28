@@ -1,28 +1,37 @@
 #include "main.h"
 
 /**
-* more_numbers - prints 0 to 14 ten times
-* Return: no return value
-*/
+ * more_numbers - Prints numbers 0 to 14 ten times
+ * Return: No Return values
+ */
 
 void more_numbers(void)
 {
-	int i, a;
+	int c = 0, num1, num2, limit = 9;
 
-	int count = 0;
-
-	while (count < 10)
+	while (c < 10)
 	{
-		for (i = 0; i <= 9; i++)
+		num2 = 0;
+		limit = 9;
+		while (num2 < 2)
 		{
-			_putchar(i + 48);
+			num1 = 0;
+			if (num2 == 1)
+			{
+				limit = 4;
+			}
+			while (num1 <= limit)
+			{
+				if (num2 == 1)
+				{
+					_putchar(49);
+				}
+				_putchar(num1 + 48);
+				num1++;
+			}
+			num2++;
 		}
-		for (a = 0; a <= 4; a++)
-		{
-			_putchar(49);
-			_putchar(a + 48);
-		}
-		count++;
-		putchar('\n');
+		_putchar('\n');
+		c++;
 	}
 }
