@@ -2,8 +2,8 @@
 
 /**
 * main - checks for uppercase character
-* Return : 0 for lowercase and 1 for uppercase
 *@c is a character
+* Return : 0 for lowercase and 1 for uppercase
 */
 
 int _isupper(int c)
@@ -16,4 +16,4 @@ int _isupper(int c)
 	{
 		return (0);
 	}
-}		
+}
