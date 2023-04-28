@@ -1,37 +1,20 @@
 #include <stdio.h>
-
 /**
-* main - determines and prints highest common factor
+* main - determines and prints highest prime number
 * Return: 0 for success
 */
-
 int main(void)
 {
-	int num = 612852475143, prime, i = 1, div = 1, count = 0;
-
-	while ( i <= num)
+	long i, num = 612852475143;
+	
+	for (i = 2; i <= num; i++)
 	{
 		if (num % i == 0)
 		{
-			while (div <= i)
-			{
-				if ((i % div) == 0)
-				{
-					count++;
-				}
-				div++;
-			}
-			if (count == 2)
-			{
-				prime = i;
-			}
-			i++;
-		}
-		else
-		{
-			i++;
+			num = num / i;
+			i--;
 		}
 	}
-	printf("%d", prime);
+	printf("%lu\n", i);
 	return (0);
 }
