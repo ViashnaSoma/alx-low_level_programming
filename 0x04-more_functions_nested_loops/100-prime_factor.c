@@ -8,7 +8,8 @@
 
 int main(void)
 {
-	int num = 612852475143, prime, i = 1, div = 1, count = 0;
+	long int num = 612852475143;
+	int prime, i = 1, div = 1, count = 0;
 
 	while ( i <= num)
 	{
