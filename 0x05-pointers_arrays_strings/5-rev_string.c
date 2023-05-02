@@ -10,8 +10,8 @@ void rev_string(char *s)
 {
 	int length = 0, length2, count = 0;
 	char store;
-	
-	while (*(s +length) != 0)
+
+	while (*(s + length) != 0)
 	{
 		length++;
 	}
