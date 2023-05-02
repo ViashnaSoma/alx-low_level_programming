@@ -12,7 +12,7 @@ void puts_half(char *str)
 
 	while (check == 0)
 	{
-		if (*(s + length) == 0)
+		if (*(str + length) == 0)
 		{
 			check = 1;
 		}
@@ -30,7 +30,7 @@ void puts_half(char *str)
 	halflength = length2 / 2;
 	while (halflength <= length)
 	{
-		_putchar(*(s + halflength));
+		_putchar(*(str + halflength));
 		halflength++;
 	}
 	_putchar('\n');
