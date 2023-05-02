@@ -22,7 +22,7 @@ void print_rev(char *s)
 		}
 	}
 	
-	while (length != 0)
+	while (length > -1)
 	{
 		_putchar(*(s + length));
 		length--;
