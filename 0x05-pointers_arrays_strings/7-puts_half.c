@@ -21,11 +21,10 @@ void puts_half(char *str)
 			length++;
 		}
 	}
-	length--;
 	length2 = length;
 	if ((length % 2) != 0)
 	{
-		length2 = length -1;
+		length2 = length - 1;
 	}
 	halflength = length2 / 2;
 	while (halflength <= length)
