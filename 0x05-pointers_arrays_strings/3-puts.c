@@ -3,25 +3,23 @@
 /**
 * _puts - prints a string
 * @str: Pointer of string
-*Return: stdout - output
+*Return: no return value
 */
 
 void _puts(char *str)
 {
-	string stdout =  '';
 	int check = 0, length = 0;
-	
+
 	while (check == 0)
 	{
-		if ((*str + len) == 0)
+		if (*(str + length) == 0)
 		{
 			check = 1;
 		}
 		else
 		{
-			stdout =  (*str + len);
+			_putchar(*(str + length));
 		}
 	}
-	stdout = stdout + '\n';
-	return (stdout);
+	_putchar('\n');
 }
