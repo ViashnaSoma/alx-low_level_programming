@@ -2,8 +2,8 @@
 
 /**
  * _pow - returns the natural square root of a number.
- * @n: input number.
- * @c: iterator.
+ * @a: input number.
+ * @b: iterator.
  * Return: square root or -1.
  */
 int _pow(int a, int b)
@@ -44,4 +44,3 @@ int _sqrt_recursion(int n)
 	}
 	return (_pow(n, 2));
 }
-	
