@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - Copies first n bytes of memory from char b
+ * _memset - Fills first n bytes of memory with char b
  * @s: String pointer for a set
  * @b: Replacement character
  * @n: Number of characters to replace
