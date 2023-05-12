@@ -8,10 +8,10 @@
 * Return: 0 for success
 */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int mult;
-	
+
 	if (argc < 3)
 	{
 		printf("Error\n");
