@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if ((atoi(argv[i]) >= 0) && (argv[i] > 47) && (argv[i] < 58))
+			if ((atoi(argv[i]) >= 0) && (*argv[i] > 47) && (*argv[i] < 58))
 			{
 				sum += atoi(argv[i]);
 			}
