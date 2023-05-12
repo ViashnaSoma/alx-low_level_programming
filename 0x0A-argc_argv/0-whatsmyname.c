@@ -3,6 +3,8 @@
 
 /**
 * main - prints name of file
+* @argc: Number of arguments
+* @argv: array of pointers for arguments
 * Return: 0 for success
 */
 
