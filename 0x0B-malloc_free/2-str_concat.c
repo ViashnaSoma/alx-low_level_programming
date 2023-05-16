@@ -12,16 +12,30 @@ char *str_concat(char *s1, char *s2)
 {
 	char *scat;
 	int lens1 = 0, lens2 = 0, len = 0, count = 0;
-
-	while (s1[lens1] != 0)
+	
+	if (!s1)
 	{
-		lens1++;
-		len++;
+		lens1 = 0;
 	}
-	while (s2[lens2] != 0)
+	else
 	{
-		lens2++;
-		len++;
+		while (s1[lens1] != 0)
+		{
+			lens1++;
+			len++;
+		}
+	}
+	if (!s2)
+	{
+		lens2 = 0;
+	}
+	else
+	{
+		while (s2[lens2] != 0)
+		{
+			lens2++;
+			len++;
+		}
 	}
 	scat = malloc((len + 1) * sizeof(char));
 	if (!scat)
