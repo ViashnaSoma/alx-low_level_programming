@@ -12,12 +12,8 @@ char *str_concat(char *s1, char *s2)
 {
 	char *scat;
 	int lens1 = 0, lens2 = 0, len = 0, count = 0;
-	
-	if (!s1)
-	{
-		lens1 = 0;
-	}
-	else
+
+	if (s1 != 0)
 	{
 		while (s1[lens1] != 0)
 		{
@@ -25,13 +21,9 @@ char *str_concat(char *s1, char *s2)
 			len++;
 		}
 	}
-	if (!s2)
+	if (s2 != 0)
 	{
-		lens2 = 0;
-	}
-	else
-	{
-		while (s2[lens2] != 0)
+	while (s2[lens2] != 0)
 		{
 			lens2++;
 			len++;
