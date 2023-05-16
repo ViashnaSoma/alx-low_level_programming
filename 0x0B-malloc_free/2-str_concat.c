@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 		lens2++;
 		len++;
 	}
-	scat = malloc((len + 1) * sizeof(char));
+	scat = malloc((len) * sizeof(char));
 	if (!scat)
 	{
 		return (NULL);
