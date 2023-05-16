@@ -12,15 +12,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *scat;
 	int lens1 = 0, lens2 = 0, len = 0, count = 0;
-	
-	if (!s1)
-	{
-		return (NULL);
-	}
-	if (!s2)
-	{
-		return (NULL);
-	}
+
 	while (s1[lens1] != 0)
 	{
 		lens1++;
