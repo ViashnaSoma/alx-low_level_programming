@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 	count = 0;
 	while (count < lens2)
 	{
-		scat[count + lens1] = s1[count];
+		scat[count + lens1] = s2[count];
 		count++;
 	}
 	return (scat);
