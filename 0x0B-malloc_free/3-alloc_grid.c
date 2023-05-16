@@ -6,39 +6,25 @@
  * alloc_grid - Creates a 2 dimensional array
  * @width: Width of array
  * @height: Height of array
- * Return: my_array if successful and null if not
+ * Return: arr if successful and null if not
  */
 
 int **alloc_grid(int width, int height)
 {
-	int **my_arr;
-	int i, j;
+	int h, w;
+	int **arr; 
 
-	if (width < 1 || height < 1)
-		return (NULL);
-
-	my_arr = malloc(height * sizeof(int *));
-	if (my_arr == NULL)
+	arr = malloc(width * height * sizeof(int));
+	if ((!arr) || (height <= 0) || (width <= 0))
 	{
-		free(my_arr);
 		return (NULL);
 	}
-
-	for (i = 0; i < height; i++)
+	for (w = 0; w < width; w++)
 	{
-		my_arr[i] = malloc(width * sizeof(int));
-		if (my_arr[i] == NULL)
+		for (h = 0; h < height; h++)
 		{
-			for (i--; i >= 0; i--)
-				free(my_arr[i]);
-			free(my_arr);
-			return (NULL);
+			arr[h, w] = 0;
 		}
 	}
-
-	for (i = 0; i < height; i++)
-		for (j = 0; j < width; j++)
-			my_arr[i][j] = 0;
-
-	return (my_arr);
+	return (arr);
 }
