@@ -18,13 +18,12 @@ char *str_concat(char *s1, char *s2)
 		lens1++;
 		len++;
 	}
-	len++;
 	while (s2[lens2] != 0)
 	{
 		lens2++;
 		len++;
 	}
-	scat = malloc((len) * sizeof(char));
+	scat = malloc((len + 1) * sizeof(char));
 	if (!scat)
 	{
 		return (NULL);
