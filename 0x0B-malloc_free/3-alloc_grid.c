@@ -22,7 +22,7 @@ int **alloc_grid(int width, int height)
 	{
 		for (h = 0; h < height; h++)
 		{
-			arr[h, w] = 0;
+			arr[h][w] = 0;
 		}
 	}
 	return (arr);
