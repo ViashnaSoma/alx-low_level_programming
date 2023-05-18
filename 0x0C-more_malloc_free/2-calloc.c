@@ -12,16 +12,16 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *memarr;
-	usigned int count;
+	unsigned int count;
 	
 	if ((nmemb == 0) || (size == 0))
 	{
-		exit(NULL);
+		exit(0);
 	}
 	memarr = malloc(nmemb * size);
 	if (memarr == 0)
 	{
-		exit(NULL);
+		exit(0);
 	}
 	for (count = 0; count < nmemb; count++)
 	{
