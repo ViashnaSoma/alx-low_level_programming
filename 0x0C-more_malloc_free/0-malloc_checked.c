@@ -10,5 +10,21 @@
 void *malloc_checked(unsigned int b)
 {
 	int *mem;
-	
-	
+
+	if (b == 0)
+	{
+		return (98);
+	}
+	else 
+	{
+		mem = malloc(b);
+		if (mem = NULL)
+		{
+			return (98);
+		}
+		else
+		{
+			return (mem);
+		}
+	}
+}
