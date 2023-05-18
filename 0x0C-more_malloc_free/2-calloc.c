@@ -21,9 +21,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	memarr = malloc(nmemb * size);
 	if (memarr == 0)
 	{
+		free(memarr);
 		return (NULL);
 	}
-	for (count = 0; count < nmemb; count++)
+	for (count = 0; count < nmemb * size; count++)
 	{
 		memarr[count] = 0;
 	}
