@@ -12,42 +12,44 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int lens1 = 0, lens2 = 0, len = 0, count, extra;
 	char *strcat;
-	
-	while (s1 != 0)
+	unsigned int lens1, lens2, count = 0, count2 = 0;
+
+	if (s1 == NULL)
 	{
-		lens1++;
-		len++;
+		s1 = "";
 	}
-	while (s2 != 0)
+	if (s2 == NULL)
 	{
-		lens2++;
-		len++;
+		s2 = "";
 	}
-	if (n > lens2)
+	for (lens1 = 0; s1[lens1] != 0; lens1++)
+		;
+	for (lens2 = 0; s2[lens2] != 0; lens2++)
+		;
+	if (lens2 > n)
 	{
-		strcat = malloc((len) * sizeof(char) + 1);
-		extra = lens2;
+		lens2 = n;
 	}
-	else
+	strcat = malloc((lens1 + lens2) * sizeof(char) + 1);
+	if (strcat != NULL)
 	{
-		strcat = malloc((lens1 + n) * sizeof(char) + 1);
-		extra = n;
+		while (lens1 > 0)
+		{
+			strcat[count] = s1[count];
+			lens1--;
+			count++;
+		}
+		while (lens2 > 0)
+		{
+			strcat[count] = s2[count2];
+			lens2--;
+			count2++;
+			count++;
+		}
+		strcat[count] = 0;
+		return (strcat);
 	}
-	if (strcat == 0)
-	{
-		free(strcat);
-		return (NULL);
-	}
-	for (count = 0; count < lens1; count++)
-	{
-		strcat[count] = s1[count];
-	}
-	for (count = 0; count < extra; count++)
-	{
-		strcat[count + lens1] = s2[count];
-	}
-	strcat[count] = 0;
-	return (strcat);
+	free(strcat);
+	return (NULL);
 }
