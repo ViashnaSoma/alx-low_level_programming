@@ -12,7 +12,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int lens1 = 0, lens2 = 0, len = 0, count, extra;
+	unsigned int lens1 = 0, lens2 = 0, len = 0, count, extra;
 	char *strcat;
 	
 	while (s1 != 0)
