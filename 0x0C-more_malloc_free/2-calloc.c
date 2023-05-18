@@ -13,15 +13,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *memarr;
 	unsigned int count;
-	
+
 	if ((nmemb == 0) || (size == 0))
 	{
-		exit(0);
+		return (NULL);
 	}
 	memarr = malloc(nmemb * size);
 	if (memarr == 0)
 	{
-		exit(0);
+		return (NULL);
 	}
 	for (count = 0; count < nmemb; count++)
 	{
