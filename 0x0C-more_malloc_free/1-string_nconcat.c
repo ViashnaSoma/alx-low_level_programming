@@ -37,6 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (strcat == 0)
 	{
+		free(strcat);
 		return (NULL);
 	}
 	for (count = 0; count < lens1; count++)
