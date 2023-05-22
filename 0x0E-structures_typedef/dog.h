@@ -1,7 +1,8 @@
-#include <stdio.h>
+#ifndef DOG
+#define DOG dog.h
 
 /**
-* dog - stores characteristics of a dog
+* struct dog - stores characteristics of a dog
 * @name: string for name
 * @age: age of dog
 * @owner: dog owner
