@@ -12,11 +12,9 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int count = 0, flag = 0, i;
-	char *str;
-	char form[] = "cifs";
+	char *str, form[] = "cifs";
 
 	va_start(ap, format);
-
 	while (format && format[count])
 	{
 		i = 0;
@@ -52,4 +50,4 @@ void print_all(const char * const format, ...)
 	}
 	printf("\n");
 	va_end(ap);
-}	
+}
