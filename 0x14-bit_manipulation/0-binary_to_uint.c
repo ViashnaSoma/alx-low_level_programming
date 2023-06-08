@@ -6,7 +6,7 @@
  * @b: pointer to string
  * Return: converted number or 0 for failure
  */
- 
+
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum, power;
