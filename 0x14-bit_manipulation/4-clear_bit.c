@@ -10,17 +10,20 @@
 
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int i;
-	unsigned int hold;
+	unsigned long int count;
+	unsigned int index2;
 
 	if (index > 64)
+	{
 		return (-1);
-	hold = index;
-	for (i = 1; hold > 0; i *= 2, hold--)
+	}
+	index2 = index;
+	for (count = 1; index2 > 0; count *= 2, index2--)
 		;
 
 	if ((*n >> index) & 1)
-		*n -= i;
-
+	{
+		*n -= count;
+	}
 	return (1);
 }
