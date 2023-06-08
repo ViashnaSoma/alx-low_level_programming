@@ -11,13 +11,16 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int mult = 1, index2 = index;
+	unsigned long int power;
 
-	while (index2)
+	if (index > 64)
 	{
-		mul *= 2;
-		index2--;
+		return (-1);
 	}
-	*n = *n + mul;
+
+	for (power = 1; index > 0; index--, power *= 2)
+		;
+	*n += power;
+
 	return (1);
 }
